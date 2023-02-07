@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mukta&family=Nunito:ital,wght@0,200;0,400;0,700;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html{
+    font-family: 'Orbitron', monospace;
+
+}
+
+#oclock-projects  {
+    background-color: #000000;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+#oclock-projects button{
+    background-color: #201f1f;
+    margin:1%;
+    height:60px;
+    width:22%;
+    border-radius: 2px;
+}
+#oclock-projects button:hover{
+    background-color: #353232;
+}
+#oclock-projects button a{
+    text-decoration: none;
+    color:rgb(50, 216, 0);
+    font-size:2em;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace;
+}
+    
+main{
+    height:auto;
+}
+
+/* ------- CSS du header ------*/
+header{
+    display:flex;
+    flex-direction: row;
+    height:7%;
+    width: 100%;
+    background-color: rgba(12, 43, 24, 0.2);
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+li{
+    height:100%;
+    list-style-type: none;
+    margin:0px 20px 0px 20px;
+}
+
+
+li a{
+    text-decoration: none;
+    color:rgb(32, 152, 189);
+    font-size: 1.8em;
+    font-family: 'Orbitron', monospace;
+
+
+}
+
+li p{
+    color:antiquewhite;
+}
+
+a:hover{
+    color: rgb(72, 255, 16);
+
+}
+
+/* ------- CSS du body horloge------*/
+
+body{
+	background:  rgb(12, 10, 10);
+    display:flex;
+    flex-direction: column;
+}
+
+#title{
+    font-size: 2em;
+    color: #8B3AFF;
+    margin-top:5%;
+    margin-bottom:2%;
+}
+
+#myClock{
+	font-size: 1.5em;
+	color: #8B3AFF;
+	font-family: 'Orbitron', monospace;
+	letter-spacing: 0.3rem;
+}
+
+#date{
+	display : flex;
+	justify-content: left;
+	font-size: 1.5em;
+	color: #8B3AFF;
+	font-family: 'Orbitron', monospace;
+    margin-bottom: 20px;
+	letter-spacing: 0.3rem;
+    font-weight:600
+}
+
+#allTime{
+    padding:5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#minuteur{
+    display: flex;
+    flex-direction: column;
+}
+
+#month, #day, #dateNumber {
+  padding-left: 8px;
+}
+
+/* ------- CSS minuteur------*/
+#backgroundMinuteur{
+    padding:3%5%0%5%;
+    background-color: rgb(151, 248, 175);
+    height:auto;
+}
+
+#display p{
+    color:rgb(10, 8, 8);
+    margin:2%;
+    font-size:2em;
+    font-weight: bold;
+}
+#disButtons{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    height:80px;
+    margin: 1%;
+}
+
+#disButtons input {
+    background-color: rgb(80, 209, 160);
+    margin : 2%;
+    height : 40px;
+    width:70px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#disButtons button{
+    background-color: aliceblue;
+    margin : 2%;
+    height : 40px;
+    width:25%;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    border:none;
+    background-color: rgba(102, 76, 163, 0.5);
+}
+
+#disButtons button:hover{
+    background-color: rgba(214, 166, 236, 0.9);
+}
+
+#display{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    height:100px;
+    margin: 1%;
+}
+
+#start{
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1%;
+    margin-bottom:2%;
+    width:120px;
+    height:120px;
+    background-color: #d83aff;
+    color:white;
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 4px 16px;
+    border:none;
+}
+
+#start:hover{
+    background-color: #af83ee;
+    color:rgb(25, 8, 32)
+}
+#endTime{
+    text-align: center;
+    font-size: 1.9em;
+    margin-bottom:15px;
+}
+
+#blocSR{
+    display:flex;
+}
+
+#reset{
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1%;
+    margin-bottom:2%;
+    width:120px;
+    height:120px;
+    background-color: #ff613a;
+    color:white;
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 4px 16px;
+    border:none;
+}
+
+#reset:hover{
+    background-color: #f8491e;
+    color:rgb(25, 8, 32)
+}
+
+#bloc-temps{
+    width:100%;
+    margin:1%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:#31e42b;
+    text-align:center;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#background-chrono{
+    padding:2%5%0%5%;
+    background-color: rgb(36, 36, 30);
+    height:auto;
+}
+
+#display-chrono{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    height:100px;
+    margin: 1%;
+}
+
+#display-chrono p{
+    color:#31e42b;
+    margin:2%;
+    padding:2%;
+    font-size:2em;
+    font-weight: bold;
+}
+
+#font-chrono{
+    color:#31e42b;
+}
+
+#result p{
+    margin:1%;
+}
