@@ -9,8 +9,8 @@ function showTime(){
      s = (s < 10) ? "0" + s : s;
      var time = h + ":" + m + ":" + s ;
     document.getElementById("myClock").innerHTML = time;    
-    setInterval(showTime, 1000);
     }
+    setInterval(showTime, 1000);
     
     function dateNumber() {
         var dateNumb = new Date();

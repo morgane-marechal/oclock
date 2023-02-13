@@ -1,4 +1,15 @@
-// code js pour l'horloge
+// code js pour la partie horloge
+let diffTime=[]; //tableau des alarmes à venir
+let passedAlert=[]; // tableau des alarmes passées
+let result=document.getElementById("result");
+let displayPassedAlert=document.getElementById("passedAlert");
+let chooseHour=0;
+let text = "";
+let allTime=chooseHour+":00";
+let checkChooseTime=document.getElementById("checkChosenTime");
+checkChooseTime.innerHTML="hello WoRlD";
+
+
 function showTime(){
     var date = new Date();
      var h = date.getHours(); 
@@ -8,94 +19,61 @@ function showTime(){
      m = (m < 10) ? "0" + m : m;
      s = (s < 10) ? "0" + s : s;
      var time = h + ":" + m + ":" + s ;
-    document.getElementById("myClock").innerHTML = time;    
-    setInterval(showTime, 1000);
+    document.getElementById("myClock").innerHTML = time;
+    getTime();
+
+    /*
+        let i = 0;
+        while (i < diffTime.length) {
+        result.innerHTML+=diffTime[i]+" ";
+        i++;
+        }
+    */
+
+    if(getTime() === time){
+        //result.innerHTML="Les deux temps sont égaux";
+        console.log("text :"+text);
+        new Audio('RAMW.mp3').play();
+        alert(text);
+        passedAlert.push(getTime());
+        console.log("passedAlert "+passedAlert);
+        displayPassedAlert.innerHTML+=passedAlert;
+    }   
+    //return time;
+}
+
+    let showtime=setInterval(showTime, 1000);
+    //let showtime = showTime();
+
+
+
+
+function getTime() {  
+    chooseHour = document.getElementById("chooseHour").value;
+    text=document.getElementById("text").value;
+    console.log("text :"+text);
+    allTime=chooseHour+":00";
+    checkChooseTime.innerHTML = allTime;
+    result.innerHTML="";
+
+    if(diffTime.includes(allTime)===false){
+        diffTime.push(allTime);
     }
-    
-    function dateNumber() {
-        var dateNumb = new Date();
-        var dateNumber = dateNumb.getDate();
-        document.getElementById("dateNumber").innerHTML = dateNumber;  
+    //console.log("alltime "+allTime);
+    //console.log("difftime "+diffTime);
+    let i = 0;
+    while (i < diffTime.length) {
+    result.innerHTML+="Prochaine sonnerie "+diffTime[i]+" <br>";
+    i++;
     }
-    
-    function month() {
-        var dateMonth = new Date();
-        var month = dateMonth.getMonth();
-        document.getElementById("month").innerHTML = month;  
-        switch (month) {
-         case 0:
-        document.getElementById("month").innerHTML = "Janvier";
-        break;
-         case 1:
-        document.getElementById("month").innerHTML = "Février";
-        break;
-        case 2:
-        document.getElementById("month").innerHTML = "Mars";
-        break;
-         case 3:
-        document.getElementById("month").innerHTML = "Avril";
-        break;
-        case 4:
-        document.getElementById("month").innerHTML = "Mai";
-        break;
-         case 5:
-        document.getElementById("month").innerHTML = "Juin";
-        break;
-        case 6:
-        document.getElementById("month").innerHTML = "Juillet";
-        break;
-         case 7:
-        document.getElementById("month").innerHTML = "Août";
-        break;
-         case 8:
-        document.getElementById("month").innerHTML = "Septembre";
-        break;
-         case 9:
-        document.getElementById("month").innerHTML = "Octobre";
-        break;
-         case 10:
-        document.getElementById("month").innerHTML = "Novembre";
-        break;
-        default:
-        document.getElementById("month").innerHTML = "Décembre";
-    }
-    }
-    
-    function day(){
-        var dateDay = new Date();
-        var day = dateDay.getDay();
-        document.getElementById("day").innerHTML = day;
-        switch (day) {
-         case 1:
-        document.getElementById("day").innerHTML = "Lundi";
-        break;
-         case 2:
-        document.getElementById("day").innerHTML = "Mardi";
-        break;
-        case 3:
-        document.getElementById("day").innerHTML = "Mercredi";
-        break;
-         case 4:
-        document.getElementById("day").innerHTML = "Jeudi";
-        break;
-        case 5:
-        document.getElementById("day").innerHTML = "Vendredi";
-        break;
-         case 6:
-        document.getElementById("day").innerHTML = "Samedi";
-        break;
-        case 0:
-        document.getElementById("day").innerHTML = "Dimanche";
-        break;
-    
-        default:
-        document.getElementById("day").innerHTML = "Je ne sais pas";
-    }       
-    }
-    
-    showTime();
-    day();
-    dateNumber();
-    month();
+
+    return allTime;
+}
+
+
+
+
+   
+ 
 
  

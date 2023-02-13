@@ -8,10 +8,8 @@
    let callGetTime = false;
    //test fonction exemple et setInterval
   // const testChrono= document.getElementById("testchrono");
-   console.log('testChrono');
-   console.log(testChrono);
-   console.log('testChrono2');
-   let chrono = 20
+
+   
    let timeIsWorking=false;
    const btnStart=document.getElementById("start");
    
