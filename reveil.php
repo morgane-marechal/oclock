@@ -19,9 +19,9 @@
             
                 <div id="chooseReveil">
                     <label for="appt-time">Veuillez choisir une heure de réveil :</label>
-                    <input type="time" id="chooseHour" name="cHour" min=0 ></input>
+                    <input type="time" id="chooseHour" name="cHour" min=0 ></input><br>
                     <label for="text">Entrez un text pour vous accueillir au réveil:</label>
-                    <input type="text" id="text" name="text" >
+                    <input type="text" id="text" name="text" ><br>
                     <button type="submit" onclick="getTime()" value="Soumettre">Soumettre</button>
                 </div>
             
@@ -32,9 +32,8 @@
         </div>
 
         <div id="bloc-reveil">
-            <div id="checkChosenTime">
-            <p>Hello</p>
-            </div>
+            <h2>Dernière alarme choisie</h2>
+            <div id="checkChosenTime">Hello</div>
             <h2>Alarmes à venir</h2>
             <div id="result">result</div>
             <h2>Alarmes passées</h2>
